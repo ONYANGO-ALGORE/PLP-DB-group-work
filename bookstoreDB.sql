@@ -279,13 +279,13 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 -- Customer Data
-insert into customer(first_name, last_name, cus_email, phone_no)
+insert into customer(customer_id, first_name, last_name, cus_email, phone_no)
 values
-('Francis', 'Kimemia', 'fkimemia@yahoo.com', 712314523),
-('Joyce', 'Oloo', 'joyoloo@gmail.com', 167809845),
-('Faith', 'Chebet', 'fchebet@outlook.com', 719087645),
-('Cyrus', 'Kioko', 'cykioko@yahoo.com', 734545687),
-('Dan', 'Murife', 'murife@gmail.com', 745624312);
+(5, 'Francis', 'Kimemia', 'fkimemia@yahoo.com', 712314523),
+(10, 'Joyce', 'Oloo', 'joyoloo@gmail.com', 167809845),
+(15, 'Faith', 'Chebet', 'fchebet@outlook.com', 719087645),
+(25, 'Cyrus', 'Kioko', 'cykioko@yahoo.com', 734545687),
+(30, 'Dan', 'Murife', 'murife@gmail.com', 745624312);
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
