@@ -97,6 +97,7 @@ CREATE TABLE `author` (
 
 LOCK TABLES `author` WRITE;
 /*!40000 ALTER TABLE `author` DISABLE KEYS */;
+INSERT INTO `author` VALUES (1,'Butere girls','echoes@yahooh.com'),(2,'Said Ahmed','saahmed@gmail.com'),(3,'Walibora Ken','walibora@outlook.com'),(4,'Imbuga francis','imbuga@yahooh.com'),(5,'Joe Dispenza','dispenza@meta.com'),(6,'Robert Greene','greene@yahooh.com');
 /*!40000 ALTER TABLE `author` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -118,7 +119,7 @@ CREATE TABLE `book` (
   KEY `language_id` (`language_id`),
   CONSTRAINT `book_ibfk_1` FOREIGN KEY (`publisher_id`) REFERENCES `publisher` (`publisher_id`),
   CONSTRAINT `book_ibfk_2` FOREIGN KEY (`language_id`) REFERENCES `book_language` (`language_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -127,6 +128,7 @@ CREATE TABLE `book` (
 
 LOCK TABLES `book` WRITE;
 /*!40000 ALTER TABLE `book` DISABLE KEYS */;
+INSERT INTO `book` VALUES (1,'Echoes of war',1,1700,2),(2,'Tumbo lisiloshiba',2,2500,1),(3,'Kidagaa kimemwozea',3,1900,1),(4,'Betrayal in the city',4,3000,2),(5,'The placebo effect',5,2700,2),(6,'The 48 laws of power',6,1700,2);
 /*!40000 ALTER TABLE `book` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -157,6 +159,7 @@ CREATE TABLE `book_author` (
 
 LOCK TABLES `book_author` WRITE;
 /*!40000 ALTER TABLE `book_author` DISABLE KEYS */;
+INSERT INTO `book_author` VALUES (1,1,'Echoes of war',1,'Butere girls'),(2,2,'Tumbo lisiloshiba',2,'Said Ahmed'),(3,3,'Kidagaa kimemwozea',3,'Walibora Ken'),(4,4,'Betrayal in the city',4,'Imbuga francis'),(5,5,'The placebo effect',5,'Joe Dispenza'),(6,6,'The 48 laws of power',6,'Robert Greene');
 /*!40000 ALTER TABLE `book_author` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -171,7 +174,7 @@ CREATE TABLE `book_language` (
   `language_id` int NOT NULL AUTO_INCREMENT,
   `language_name` varchar(100) NOT NULL,
   PRIMARY KEY (`language_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -180,6 +183,7 @@ CREATE TABLE `book_language` (
 
 LOCK TABLES `book_language` WRITE;
 /*!40000 ALTER TABLE `book_language` DISABLE KEYS */;
+INSERT INTO `book_language` VALUES (1,'Kiswahili'),(2,'English');
 /*!40000 ALTER TABLE `book_language` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -398,7 +402,7 @@ CREATE TABLE `publisher` (
   `publisher_id` int NOT NULL AUTO_INCREMENT,
   `publisher_name` varchar(100) NOT NULL,
   PRIMARY KEY (`publisher_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -407,6 +411,7 @@ CREATE TABLE `publisher` (
 
 LOCK TABLES `publisher` WRITE;
 /*!40000 ALTER TABLE `publisher` DISABLE KEYS */;
+INSERT INTO `publisher` VALUES (1,'Wanainchi'),(2,'Longhorn'),(3,'Spotlight'),(4,'EAEP'),(5,'Harvard university press'),(6,'Penguin Random House');
 /*!40000 ALTER TABLE `publisher` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -447,4 +452,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-13 20:51:08
+-- Dump completed on 2025-04-13 23:10:40
