@@ -39,6 +39,14 @@ CREATE TABLE `address` (
 --
 -- Dumping data for table `address`
 --
+-- Address Data
+insert into address(street, city, postal_code, country_id)
+values
+('Kitengela', 'Nairobi', '20100', 254),
+('Jinja', 'Kampala', '14300', 256),
+('Kigali', 'Kigali', '42200', 250),
+('Addis', 'Addis Ababa', '17400', 251),
+('Daresalam', 'Daresalam', '19712', 255);
 
 LOCK TABLES `address` WRITE;
 /*!40000 ALTER TABLE `address` DISABLE KEYS */;
@@ -192,6 +200,14 @@ CREATE TABLE `country` (
 --
 -- Dumping data for table `country`
 --
+-- Country Data
+insert into country(country_id, country_name)
+values
+(254, 'Kenya'),
+(255, 'Tanzania'),
+(256, 'Uganda'),
+(250, 'Rwanda'),
+(251, 'Ethiopia');
 
 LOCK TABLES `country` WRITE;
 /*!40000 ALTER TABLE `country` DISABLE KEYS */;
@@ -250,6 +266,14 @@ CREATE TABLE `customer` (
 --
 -- Dumping data for table `customer`
 --
+-- Customer Data
+insert into customer(first_name, last_name, cus_email, phone_no)
+values
+('Francis', 'Kimemia', 'fkimemia@yahoo.com', 712314523),
+('Joyce', 'Oloo', 'joyoloo@gmail.com', 167809845),
+('Faith', 'Chebet', 'fchebet@outlook.com', 719087645),
+('Cyrus', 'Kioko', 'cykioko@yahoo.com', 734545687),
+('Dan', 'Murife', 'murife@gmail.com', 745624312);
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
