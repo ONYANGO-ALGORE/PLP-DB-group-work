@@ -279,7 +279,7 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 -- Customer Data
-insert into customer(first_name, last_name, cus_email, phone_no)
+insert into customer(customer_id, first_name, last_name, cus_email, phone_no)
 values
 (5, 'Francis', 'Kimemia', 'fkimemia@yahoo.com', 712314523),
 (10, 'Joyce', 'Oloo', 'joyoloo@gmail.com', 167809845),
