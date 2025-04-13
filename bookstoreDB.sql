@@ -251,7 +251,14 @@ CREATE TABLE `cust_order` (
 
 --
 -- Dumping data for table `cust_order`
---
+----Customer Order Data
+INSERT INTO cust_order(order_id, customer_id, shippingMethod_id, order_date, orderStatus_id)
+VALUES
+(15, 5, 1, '2025-04-13', 1),
+(20, 10, 2, '2025-04-14', 2),
+(25, 15, 3, '2025-04-15', 3),
+(30, 25, 4, '2025-04-16', 4),
+(35, 30, 5, '2025-04-17', 5);
 
 LOCK TABLES `cust_order` WRITE;
 /*!40000 ALTER TABLE `cust_order` DISABLE KEYS */;
@@ -350,7 +357,14 @@ CREATE TABLE `order_history` (
 
 --
 -- Dumping data for table `order_history`
---
+----Order History Data
+insert into order_history(history_id, order_id, orderStatus_id)
+values
+(15, 15, 1),
+(16, 20, 2),
+(17, 25, 3),
+(18, 30, 4),
+(19, 35, 5);
 
 LOCK TABLES `order_history` WRITE;
 /*!40000 ALTER TABLE `order_history` DISABLE KEYS */;
@@ -377,7 +391,14 @@ CREATE TABLE `order_line` (
 
 --
 -- Dumping data for table `order_line`
---
+----order line data
+INSERT INTO order_line(order_id, book_id, quantity)
+VALUE
+(15, 1, 23),
+(20, 2, 12),
+(25, 3, 40),
+(30, 4, 33),
+(35, 5, 25);
 
 LOCK TABLES `order_line` WRITE;
 /*!40000 ALTER TABLE `order_line` DISABLE KEYS */;
@@ -400,9 +421,14 @@ CREATE TABLE `order_status` (
 
 --
 -- Dumping data for table `order_status`
---
-
-LOCK TABLES `order_status` WRITE;
+--Order status data
+insert into order_status(orderStatus_id, statusname)
+values
+(1, 'Delivered'),
+(2, 'Shipped'),
+(3, 'Processing'),
+(4, 'Cancelled'),
+(5, 'Returned');LOCK TABLES `order_status` WRITE;
 /*!40000 ALTER TABLE `order_status` DISABLE KEYS */;
 /*!40000 ALTER TABLE `order_status` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -448,9 +474,14 @@ CREATE TABLE `shipping_method` (
 
 --
 -- Dumping data for table `shipping_method`
---
-
-LOCK TABLES `shipping_method` WRITE;
+-- Shipping Method Data
+INSERT INTO shipping_method(shippingMethod_id, shippingMedthod_name, shipping_Cost)
+VALUES
+(1, 'Standard Shipping', 500),
+(2, 'Express Shipping', 1000),
+(3, 'Overnight Shipping', 1500),
+(4, 'International Shipping', 2000),
+(5, 'Same Day Delivery', 2500);LOCK TABLES `shipping_method` WRITE;
 /*!40000 ALTER TABLE `shipping_method` DISABLE KEYS */;
 /*!40000 ALTER TABLE `shipping_method` ENABLE KEYS */;
 UNLOCK TABLES;
