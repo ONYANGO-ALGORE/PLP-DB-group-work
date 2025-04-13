@@ -315,6 +315,14 @@ CREATE TABLE `customer_address` (
 --
 -- Dumping data for table `customer_address`
 --
+-- Customer Address Data
+insert into customer_address(customer_id, address_id, addressStatus_id)
+values 
+(5, 1, 254),
+(10, 2, 256),
+(15, 3, 250),
+(25, 4, 251),
+(30, 5, 255);
 
 LOCK TABLES `customer_address` WRITE;
 /*!40000 ALTER TABLE `customer_address` DISABLE KEYS */;
