@@ -70,6 +70,14 @@ CREATE TABLE `address_status` (
 --
 -- Dumping data for table `address_status`
 --
+-- Address Status Data
+insert into address_status(addressStatus_id, adr_status)
+values
+(12, 'Current'),
+(1, 'New'),
+(23, 'Current'),
+(51, 'New'),
+(67, 'Current');
 
 LOCK TABLES `address_status` WRITE;
 /*!40000 ALTER TABLE `address_status` DISABLE KEYS */;
