@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `bookstoredb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `bookstoredb`;
 -- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bookstoredb
@@ -42,6 +40,7 @@ CREATE TABLE `address` (
 
 LOCK TABLES `address` WRITE;
 /*!40000 ALTER TABLE `address` DISABLE KEYS */;
+INSERT INTO `address` VALUES (1,'Kitengela','Nairobi','20100',254),(2,'Jinja','Kampala','14300',256),(3,'Kigali','Kigali','42200',250),(4,'Addis','Addis Ababa','17400',251),(5,'Daresalam','Daresalam','19712',255);
 /*!40000 ALTER TABLE `address` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -65,6 +64,7 @@ CREATE TABLE `address_status` (
 
 LOCK TABLES `address_status` WRITE;
 /*!40000 ALTER TABLE `address_status` DISABLE KEYS */;
+INSERT INTO `address_status` VALUES (1,'New'),(12,'Current'),(23,'Current'),(51,'New'),(67,'Current');
 /*!40000 ALTER TABLE `address_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -199,6 +199,7 @@ CREATE TABLE `country` (
 
 LOCK TABLES `country` WRITE;
 /*!40000 ALTER TABLE `country` DISABLE KEYS */;
+INSERT INTO `country` VALUES (250,'Rwanda'),(251,'Ethiopia'),(254,'Kenya'),(255,'Tanzania'),(256,'Uganda');
 /*!40000 ALTER TABLE `country` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -257,6 +258,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+INSERT INTO `customer` VALUES (1,'Francis','Kimemia','fkimemia@yahoo.com',712314523),(2,'Joyce','Oloo','joyoloo@gmail.com',167809845),(3,'Faith','Chebet','fchebet@outlook.com',719087645),(4,'Cyrus','Kioko','cykioko@yahoo.com',734545687),(5,'Dan','Murife','murife@gmail.com',745624312);
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -286,6 +288,7 @@ CREATE TABLE `customer_address` (
 
 LOCK TABLES `customer_address` WRITE;
 /*!40000 ALTER TABLE `customer_address` DISABLE KEYS */;
+INSERT INTO `customer_address` VALUES (2,3,1),(1,2,12),(3,4,51),(4,1,23);
 /*!40000 ALTER TABLE `customer_address` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -414,10 +417,6 @@ LOCK TABLES `shipping_method` WRITE;
 /*!40000 ALTER TABLE `shipping_method` DISABLE KEYS */;
 /*!40000 ALTER TABLE `shipping_method` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'bookstoredb'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -428,4 +427,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-13 23:10:40
+-- Dump completed on 2025-04-27  4:50:17
